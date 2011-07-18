@@ -1,7 +1,17 @@
 //= content_for :sidebar do
 //  %h1 Found Me!
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+//%h1 Home#index
+%h1 
+  //<% if user_signed_in? %>
+  Signed in as... 
+  =current_user.email
+  //<% end %>
+//%p Find me in app/views/home/index.html.haml
+.block#text
+  .content
+    %h2 Home HERE
+    .inner
+      %p.first Please use the navigation bar above to move around the site.
 .block#text
   .content
     %h2 Home HERE
